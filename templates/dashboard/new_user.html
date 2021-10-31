@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="dashboard-form" align="center">
+
+    <h1>Create New User</h1>
+    <form action="/dashboard/new-user" method="POST">
+    
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="username" name="username" required>
+            <label for="floatingInput">Username</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="pin" name="pin" required>
+            <label for="floatingPassword">Pin</label>
+        </div>
+
+        <br><br>
+        <button type="submit" class="btn btn-warning btn-lg">Create User</button>
+    
+    </form>
+
+    <br>
+
+    <hr style="color: gray !important;">
+
+    <div style="margin-top: 30px;">
+        <h3>Users</h3>
+        {% for user in users_list %}
+
+        <a href="/dashboard?location={{ user['username'] }}">{{ user['username'] }}</a> <br>
+
+        {% endfor %}
+
+    </div>
+    
+</div>
+
+
+
+{% endblock %}

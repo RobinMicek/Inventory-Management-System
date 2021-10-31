@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+
+
+
+{% block content %}
+<!--List-->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col"><span class="material-icons">qr_code_scanner</span></th>
+        <th scope="col">Name</th>
+        <th scope="col">Tag</th>
+        <th scope="col">Location</th>
+        <th scope="col">Last Change</th>
+        <th scope="col">Take</th>
+        <th scope="col">Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    {% for item in items_list %}
+
+    <tr>
+    <th scope="row">{{ item["code"]}}</th>
+    <td><a href='/dashboard/item?code={{ item["code"] }}'>{{ item["name"] }}</a></td>
+    <td><a href='/dashboard?tag={{ item["tag"] }}'>{{ item["tag"] }}</a></td>
+    <td><a href='/dashboard?location={{ item["location"] }}'>{{ item["location"] }}</a></td>
+    <td>{{ item["date_of_change"] }}</td>
+    <td>
+        <a href='/function/assign?code={{ item["code"] }}'>
+            <button type="button" class="btn btn-warning">
+                <span class="material-icons">add</span>
+            </button>
+        </a>
+    </td>
+    <td>
+      <a href='/function/assign?code={{ item["code"] }}&stock=True'>
+          <button type="button" class="btn btn-danger">
+              <span class="material-icons">reply</span>
+          </button>
+      </a>
+  </td>
+    </tr>
+    
+    {% endfor %}
+    </tbody>
+    </table>
+
+
+{% endblock %}

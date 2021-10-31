@@ -1,0 +1,68 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@200;300;400;500;600&display=swap');
+    /* Barcode Font */
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap');
+
+body, html{
+    height: 100%;
+    margin: 0px;
+    font-family: 'Saira', sans-serif !important;
+    font-weight: 400;
+
+    background-color: white;
+
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+hr {
+    color: white !important;
+}
+
+
+
+/* Barcode font */
+.barcode {
+    font-family: 'Libre Barcode 39 Text', cursive;
+    font-size: 60px;
+}
+
+/* Form Div */
+.dashboard-form {
+    width: 40%;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+/* Sidebar */
+.sidebar {
+    background: rgb(53, 53, 53);
+    height: 100%;
+}
+
+.sidebar-button {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(53, 53, 53);
+    border: none;
+
+    font-size: 30px;
+    color: white;
+    font-family: 'Saira', sans-serif !important;
+    font-weight: 500;
+
+    transition-duration: 0.2s;
+}
+
+.sidebar-button:hover {
+    color: gray;
+}
+
+.col-10 {
+    height: 100%;
+}
+
+.col-2 {
+    height: 100%;
+}

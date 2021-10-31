@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="dashboard-form" align="center">
+
+    <h1>Create New Item</h1>
+    <form action="/dashboard/new-item" method="POST">
+    
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="name" name="name" required>
+            <label for="floatingInput">Name</label>
+        </div>
+
+        <div class="mb-3">
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="description" placeholder="Description" rows="3"></textarea>
+        </div>
+
+        <select class="form-select" aria-label="Default select example" name="tag">
+            {% for tag in TAGS %}
+                <option value="{{ tag }}">{{ tag }}</option>
+            {% endfor %}
+        </select>
+        <br>
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="code" name="code" required>
+            <label for="floatingInput"><span class="material-icons">qr_code_scanner</span></label>
+        </div>
+
+
+        <br><br>
+        <button type="submit" class="btn btn-warning btn-lg">Create Item</button>
+    
+    </form>
+
+    
+</div>
+
+
+
+{% endblock %}

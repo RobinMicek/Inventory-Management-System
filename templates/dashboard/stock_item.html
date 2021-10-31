@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="dashboard-form" align="center">
+
+    <h1>Stock Item</h1>
+    <form action="/function/stock" method="POST">
+    
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="code" name="code" required>
+            <label for="floatingInput"><span class="material-icons">qr_code_scanner</span></label>
+        </div>
+
+        <br><br>
+        <button type="submit" class="btn btn-warning btn-lg">Place to stock</button>
+    
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+/* Disable scrolling */
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+body {
+    margin: 0%;
+
+    /* Background Picture */
+    background-image: url(https://cdn.wallpapersafari.com/9/3/alWT49.jpg);
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1 {
+    font-family: 'Bungee Inline', cursive;
+}
+
+.login-box {
+    background-color: white;
+    border-radius: 5px;
+    border-color: white;
+
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15%;
+    padding: 30px;
+}
