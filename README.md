@@ -1,6 +1,6 @@
 # Inventory-Management-System
  
-Inventory managemt app that I've created for having better overview over items (Video Equipment) location in my video production company.
+Inventory management app that I've created for having better overview over items (Video Equipment) location in my video production company.
 
 This app was made purely for our needs and is meant to run on **local network** (lacks some security features recommended for hosting on the internet).
 
